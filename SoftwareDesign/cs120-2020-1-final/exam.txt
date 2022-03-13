@@ -1,0 +1,444 @@
+(1) This is an INDIVIDUAL-EFFORT examination. No discussion or
+collaboration is permitted. Direct ALL questions to the instructor. If
+you do not understand a question or think there is an error, then ask
+the instructor for clarification.
+
+(2) You are permitted to use any resources EXCEPT CONSULTING ANYONE
+OTHER THAN YOUR INSTRUCTOR to complete this exam.
+
+(3) Each question in the second part is followed by a block set aside for your answer. Only
+answers written in the correct block will be graded. Look for
+ANSWER-N-START and ANSWER-N-END. You can add as many lines as you want
+between these markings. Please do not type elsewhere.
+
+(4) When you are finished with the examination, please ensure it is
+properly pushed back to Aquinas using Git.
+
+= QUESTION-1 ==================================================================
+
+What value would y hold if the following Java fragment executed?
+
+int x = 15;
+int y = x / 3 + 2;
+
+= ANSWER-1-START ==============================================================
+int y would hold the value 7
+= ANSWER-1-END ================================================================
+
+= QUESTION-2 ==================================================================
+
+What value would x hold if the following Java fragment executed?
+
+int x = 10 % 3;
+
+= ANSWER-2-START ==============================================================
+int x would hold value 1
+= ANSWER-2-END ================================================================
+
+= QUESTION-3 ==================================================================
+
+What value would y hold if the following Java fragment executed?
+
+int x = 3;
+double y = x / 2;
+
+= ANSWER-3-START ==============================================================
+double y would hold value 1.0
+= ANSWER-3-END ================================================================
+
+= QUESTION-4 ==================================================================
+
+What would the following Java fragment print?
+
+int x = 15;
+if (x > 20) {
+	System.out.println("Large");
+}
+if (x > 10) {
+	System.out.println("Medium");
+}
+if (x > 0) {
+	System.out.println("Small");
+}
+
+= ANSWER-4-START ==============================================================
+Medium 
+Small
+= ANSWER-4-END ================================================================
+
+= QUESTION-5 ==================================================================
+
+What would the following Java fragment print?
+
+int x = 15;
+if (x > 20) {
+	System.out.println("Large");
+} else if (x > 10) {
+	System.out.println("Medium");
+} else {
+	System.out.println("Small");
+}
+
+= ANSWER-5-START ==============================================================
+Medium
+= ANSWER-5-END ================================================================
+
+= QUESTION-6 ==================================================================
+
+What would the following Java fragment print?
+
+int x = 15;
+if (x < 5 || x > 10) {
+	System.out.println("this");
+} else {
+	System.out.println("that");
+}
+
+= ANSWER-6-START ==============================================================
+this
+= ANSWER-6-END ================================================================
+
+= QUESTION-7 ==================================================================
+
+What would the following Java fragment print?
+
+int x = 10;
+int y = 20;
+if (x != 10) {
+	if (y == 20) {
+		System.out.println("one");
+	} else {
+		System.out.println("two");
+	}
+} else {
+	if (y == 20) {
+		System.out.println("three");
+	} else {
+		System.out.println("four");
+	}
+}
+
+= ANSWER-7-START ==============================================================
+three
+= ANSWER-7-END ================================================================
+
+= QUESTION-8 ==================================================================
+
+Write a Java fragment that prints the odd integers from 1 through 9,
+including 1 and 9. Use a "while" loop.
+
+= ANSWER-8-START ==============================================================
+int i = 1;
+while(i<=9){
+	System.out.println(i + " ");
+	i=i+2;
+}
+= ANSWER-8-END ================================================================
+
+= QUESTION-9 ==================================================================
+
+Write a Java fragment that prints the odd integers from 1 through 9,
+including 1 and 9. Use a "for" loop.
+
+= ANSWER-9-START ==============================================================
+for(int i=1; i<=9; i++){
+	if (i%2!=0){
+		System.out.println(i + " ");
+	}
+}
+= ANSWER-9-END ================================================================
+
+= QUESTION-10 =================================================================
+
+Write a Java fragment that declares a variable named a as an array of
+three Strings. Initialize the first (index zero), second, and third
+elements of the array to "one", "two", and "three", respectively.
+
+= ANSWER-10-START =============================================================
+
+
+String 1 = new String("one");
+String 2 = new String("two");
+String 3 = new String("three");
+
+int[] a = new int[10];
+
+= ANSWER-10-END ===============================================================
+
+= QUESTION-11 =================================================================
+
+What is the highest and lowest index you can use to obtain elements in
+the following array?
+
+int[] x = new int[10];
+
+= ANSWER-11-START =============================================================
+lowest is 0, highest is 10
+= ANSWER-11-END ===============================================================
+
+= QUESTION-12 =================================================================
+
+Write a Java fragment that implements a for loop that prints each element
+in the following array. Write your loop so that it will continue to work
+if the array is changed to contain more or fewer than ten elements.
+
+int[] x = new int[10];
+
+= ANSWER-12-START =============================================================
+for (int i=0; i < 10; i++){
+	System.out.println(a[i]);
+	System.out.println("..");
+}
+= ANSWER-12-END ===============================================================
+
+= QUESTION-13 =================================================================
+
+Write a Java fragment that declares a variable named s of type String.
+Set s to reference the String "Hello, world!"
+
+= ANSWER-13-START =============================================================
+String s = new String("Hello, world!");
+= ANSWER-13-END ===============================================================
+
+= QUESTION-14 =================================================================
+
+What will the following program print, and why?
+
+String s1 = new String("abc");
+String s2 = new String("abc");
+if (s1 == s2) {
+	System.out.println("Equal 1")
+}
+if (s1.equals(s2)) {
+	System.out.println("Equal 2")
+}
+
+= ANSWER-14-START =============================================================
+The program will print "Equal 2" because the == operator is used on integer/double/float/ number values, whereas the s1.equals(s2) statement is what should be used on strings.
+= ANSWER-14-END ===============================================================
+
+= QUESTION-15 =================================================================
+
+On which lines will the variable i be in scope?
+
+1.  public static void main(String[] args) {
+2.  	int[] a = new int[10];
+3.  	for (int i = 0; i < 10; i++) {
+4.  		System.out.println(a[i]);
+5.  		System.out.println("...");
+6.  	}
+7.  	System.out.println("done");
+8.  }
+
+= ANSWER-15-START =============================================================
+Variable i will be in scope from line 3 to line 6
+= ANSWER-15-END ===============================================================
+
+= QUESTION-16 =================================================================
+
+On which lines will the variable a be in scope?
+
+1.  public static void main(String[] args) {
+2.  	int[] a = new int[10];
+3.  	for (int i = 0; i < 10; i++) {
+4.  		System.out.println(a[i]);
+5.  		System.out.println("...");
+6.  	}
+7.  	System.out.println("done");
+8.  }
+
+= ANSWER-16-START =============================================================
+variable a will be in scope from line 2 to line 6
+= ANSWER-16-END ===============================================================
+
+= QUESTION-17 =================================================================
+
+What would the following Java fragment print?
+
+int f2(int n) {
+	return n + 2;
+}
+
+int f1(int n) {
+	return f2(n) + f2(n);
+}
+
+public static void main(String[] args) {
+	System.out.println(f1(2));
+}
+
+= ANSWER-17-START =============================================================
+This fragment would not print or compile because a non-static method cannot be referenced in a static method
+= ANSWER-17-END ===============================================================
+
+= QUESTION-18 =================================================================
+
+What would the following Java fragment print, assuming execution starts
+with B's main method?
+
+class A {
+	public void f() {
+		System.out.println("a");
+	}
+}
+
+class B extends A {
+	public void f() {
+		System.out.println("b");
+	}
+
+	public static void main(String[] args) {
+		A a = new B();
+		a.f();
+	}
+}
+
+= ANSWER-18-START =============================================================
+If execution started with class B/s main argument, the program would print "b"
+= ANSWER-18-END ===============================================================
+
+= QUESTION-19 =================================================================
+
+Would the following compile? If not, why?
+
+class A {
+	private int x;
+}
+
+class B {
+	private A a;
+
+	public int f() {
+		return a.x;
+	}
+}
+
+= ANSWER-19-START =============================================================
+The following would not compile because a.x contains a private int from class A
+= ANSWER-19-END ===============================================================
+
+= QUESTION-20 =================================================================
+
+Would the following compile? If not, why?
+
+class A {
+	public int x;
+}
+
+class B {
+	private A a;
+
+	public int f() {
+		return a.x;
+	}
+}
+
+= ANSWER-20-START =============================================================
+Yes, this would compile.
+= ANSWER-20-END ===============================================================
+
+= QUESTION-21 =================================================================
+
+Would the following compile? If not, why?
+
+class A {
+	protected int a;
+}
+
+class B extends A {
+	public int f() {
+		return this.a;
+	}
+}
+
+= ANSWER-21-START =============================================================
+yes, this would compile.
+= ANSWER-21-END ===============================================================
+
+= QUESTION-22 =================================================================
+
+What would the following Java fragment print, assuming execution starts
+with A's main method?
+
+class A {
+	private a;	
+
+	A(int a) {
+		this.a = a;
+	}
+
+	public void f() {
+		System.out.println(a);
+	}
+
+	public static void main(String[] args) {
+		A a = new A(12);
+		a.f();
+	}
+}
+
+= ANSWER-22-START =============================================================
+if execution started with A's main method, then the program would not print anything since the type of private a is never defined. 
+= ANSWER-22-END ===============================================================
+
+= QUESTION-23 =================================================================
+
+What would the following Java fragment print, assuming execution starts
+with A1's main method?
+
+interface A {
+	public void f();
+}
+
+class A1 implements A {
+	public void f() {
+		System.out.println("a1");
+	}
+
+	public static void main(String[] args) {
+		A[] a = new A[2];
+
+		a[0] = new A1();
+		a[1] = new A2();
+
+		for (int i = 0; i < a.length; i++) {
+			a[i].f();
+		}
+	}
+}
+
+class A2 implements A {
+	public void f() {
+		System.out.println("a2");
+	}
+}
+
+= ANSWER-23-START =============================================================
+the fragment would print a1 and a2 on two lines, respectively
+= ANSWER-23-END ===============================================================
+
+= QUESTION-24 =================================================================
+
+Describe the concept of abstraction with respect to computer science
+and software engineering.
+
+= ANSWER-24-START =============================================================
+abstraction is a very important concept in computer science.  It is essentially the idea of making our code as 
+simple as possible and removing any unnecessary lines of code.  If something is being done in 10 lines but can be 
+done in 5 lines, it should always be done in 5. We use functions and class hierarchy to accomplish this. 
+It allows for our code to be more easily read by other computer scientists, as well as helps programs load faster 
+and be more efficient.
+= ANSWER-24-END ===============================================================
+
+= QUESTION-25 =================================================================
+
+Describe the concept of recursion with respect to computer science
+and software engineering.
+
+= ANSWER-25-START =============================================================
+Recursion is another important concept in computer science. It is a way to solve problems that can seem too complex
+for traditional solutions. Instead, recursion allows for us to solve these problems by breaking them into smaller 
+problems.  This is usually done on problems that break down into many similar branches of problems, like the 
+factorial example we covered.  Recursion allows us to solve these problems by allowing a function to call itself. 
+This is especially  useful when a problem has a solution that uses solutions to similar problems. 
+= ANSWER-25-END ===============================================================
